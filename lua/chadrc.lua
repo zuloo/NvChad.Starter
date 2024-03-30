@@ -5,6 +5,7 @@
 local M = {}
 
 M.ui = {
+  theme_toggle = { "solarized_aims", "one_light" },
 	theme = "solarized_aims",
 
   hl_override = {
