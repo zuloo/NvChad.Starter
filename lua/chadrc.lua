@@ -12,8 +12,6 @@ M.ui = {
     DiffChange = { fg="none", bg={"teal", -23}},
     DiffDelete = { fg="none", bg={"red", -25}},
     DiffText = { fg="none", bg={"red", -25}},
-
-    MiniMapNormal = { fg="grey"}
   },
 }
 
