@@ -3,7 +3,7 @@ local ui = require("nvconfig").ui
 -- set timezone
 local timeShift = 1 * 60 * 60  -- +3 hours
 
-return {
+M = {
   set_virt_column_color = function()
     if (ui.theme == ui.theme_toggle[1]) then
       vim.api.nvim_command(":highlight VirtColumn guifg=#d7d7af")
@@ -17,6 +17,9 @@ return {
     local hours = tonumber(os.date('%H', os.time() + timeShift))
     if (hours > 7 and hours < 20 and ui.theme ~= ui.theme_toggle[1]) then
       require("base46").toggle_theme()
+      M.set_virt_column_color()
     end
   end
 }
+
+return M
