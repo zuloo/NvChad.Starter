@@ -41,3 +41,4 @@ end)
 local colorizer_config = require "configs.colorizer"
 require("colorizer").setup(colorizer_config)
 
+require("utils").choose_theme()

@@ -5,8 +5,9 @@
 local M = {}
 
 M.ui = {
-  theme_toggle = { "solarized_light", "solarized_aims" },
-	theme = "solarized_light",
+  -- theme_toggle == { day_theme, night_theme }
+  theme_toggle = { "solarized_day", "solarized_night" },
+	theme = "solarized_day",
 
   hl_override = {
     DiffAdd = { fg="none", bg={"green", -17}},
