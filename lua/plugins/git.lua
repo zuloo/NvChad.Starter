@@ -44,13 +44,13 @@ return {
           hl('GitSignsChangeNr', '#519ABA')
           hl('GitSignsDeleteNr', '#db302d')
 
-          hl('GitSignsStagedAdd', '#4b5700', '#011923')
-          hl('GitSignsStagedChange', '#2a576a', '#011923')
-          hl('GitSignsStagedDelete', '#7e1715', '#011923')
+          hl('GitSignsStagedAdd', '#4b5700')
+          hl('GitSignsStagedChange', '#2a576a')
+          hl('GitSignsStagedDelete', '#7e1715')
 
-          hl('GitSignsStagedAddNr', '#849900', '#011923')
-          hl('GitSignsStagedChangeNr', '#519ABA', '#011923')
-          hl('GitSignsStagedDeleteNr', '#db302d', '#011923')
+          hl('GitSignsStagedAddNr', '#4b5700')
+          hl('GitSignsStagedChangeNr', '#2a576a')
+          hl('GitSignsStagedDeleteNr', '#7e1715')
 
           local gs = package.loaded.gitsigns
           local function map(mode, l, r, opts)
