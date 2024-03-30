@@ -31,10 +31,10 @@ M.base_30 = {
   dark_purple = "#B02669",
   teal = "#519ABA",
   orange = "#cb4b16",
-  cyan = "#2aa198",--
+  cyan = "#00afaf",--
   statusline_bg = "#02202D",
   lightbg = "#03394F",
-  pmenu_bg = "#29a298",
+  pmenu_bg = "#00afaf",
   folder_bg = "#268bd3",
 }
 
