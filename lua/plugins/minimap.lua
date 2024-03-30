@@ -1,8 +1,7 @@
 return {
   'echasnovski/mini.map',
   version = "*",
---  event = "BufEnter",
-  lazy = false,
+  event = "BufEnter",
   config = function()
     local minimap_config = require "configs.minimap"
     MiniMap = require("mini.map")
