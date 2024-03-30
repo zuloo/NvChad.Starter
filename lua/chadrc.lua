@@ -13,6 +13,14 @@ M.ui = {
     DiffDelete = { fg="none", bg={"red", -25}},
     DiffText = { fg="none", bg={"red", -25}},
   },
+
+  telescope = { style = "bordered" },
+
+  cheatsheet = { theme = "simple" },
+
+  nvdash = {
+      load_on_startup = true,
+  }
 }
 
 return M
