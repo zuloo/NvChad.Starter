@@ -6,8 +6,12 @@ adapted from [github.com/NvChad/starter](https://github.com/NvChad/starter)
 
 - [Mini.Map](https://github.com/echasnovski/mini.map)
 - [VirtColumen](https://github.com/xiyaowong/virtcolumn.nvim")
-- keymaps for [GitSigns](https://github.com/lewis6991/gitsigns.nvim) and
-  [vim-fugitive](https://github.com/tpope/vim-fugitive)
+- keymaps for [GitSigns](https://github.com/lewis6991/gitsigns.nvim),
+  [vim-fugitive](https://github.com/tpope/vim-fugitive) and
+  [git-worktree](https://github.com/ThePrimeagen/git-worktree.nvim)
+- [vim-dadbod](https://github.com/tpope/vim-dadbod),
+  [vim-dadbod-ui](https://github.com/kristijanhusak/vim-dadbod-ui) and
+  [vim-dadbod-completion](https://github.com/kristijanhusak/vim-dadbod-completion)
 - sane [treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
   parser selection
 - solarized_day and solarized_night themes with toggle
