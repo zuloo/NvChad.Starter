@@ -7,20 +7,13 @@ return {
     MiniMap = require("mini.map")
     MiniMap.setup(minimap_config)
 
-    local function sethl()
-      local api = vim.api
---      api.nvim_command(":highlight MiniMapNormal guifg=#555555")
-    end
-
     local function map(mode, l, r, opts)
       opts = opts or {}
-      opts.buffer = bufnr
       vim.keymap.set(mode, l, r, opts)
     end
 
     map('n', '<leader>mm', function()
       MiniMap.toggle()
-      sethl()
       return '<Ignore>'
     end, {expr=true, desc="Toggle Mini Map"})
 
