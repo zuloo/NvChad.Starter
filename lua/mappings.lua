@@ -59,6 +59,26 @@ map("n", "<leader>g|", ":Gvdiffsplit<CR>", {
   desc="Git open git diff split vertical"
 })
 
+map("n", "<leader>gw", function()
+    require('telescope').load_extension("git_worktree")
+    vim.schedule(function()
+      require('telescope').extensions.git_worktree.git_worktrees(
+        { path_display = { "fold" }}
+      )
+    end)
+    return '<Ignore>'
+end, {expr=true, desc="Git Change/Delete Worktree"})
+
+map("n", "<leader>go", function()
+    require('telescope').load_extension("git_worktree")
+    vim.schedule(function()
+      require('telescope').extensions.git_worktree.create_git_worktree(
+        { path_display = { "fold" }}
+      )
+    end)
+    return '<Ignore>'
+end, {expr=true, desc="Git Open/Create New Worktree"})
+
 map("n", "<leader>n", function()
   vim.opt.number = not vim.opt.number._value
   return '<Ignore>'
