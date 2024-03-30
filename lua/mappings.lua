@@ -79,6 +79,13 @@ map("n", "<leader>go", function()
     return '<Ignore>'
 end, {expr=true, desc="Git Open/Create New Worktree"})
 
+map("n" ,"<leader>db", ":DBUIToggle<CR>", {
+  desc="DataBase Toggle DB Explorer"
+})
+map("n" ,"<leader>da", ":DBUIAddConnection<CR>", {
+  desc="Database Add DB Connection"
+})
+
 map("n", "<leader>n", function()
   vim.opt.number = not vim.opt.number._value
   return '<Ignore>'
