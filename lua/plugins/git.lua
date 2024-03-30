@@ -46,11 +46,15 @@ return {
 
           hl('GitSignsStagedAdd', '#4b5700')
           hl('GitSignsStagedChange', '#2a576a')
+          hl('GitSignsStagedChangedelete', '#2a576a')
           hl('GitSignsStagedDelete', '#7e1715')
+          hl('GitSignsStagedTopdelete', '#7e1715')
 
           hl('GitSignsStagedAddNr', '#4b5700')
           hl('GitSignsStagedChangeNr', '#2a576a')
+          hl('GitSignsStagedChangedeleteNr', '#2a576a')
           hl('GitSignsStagedDeleteNr', '#7e1715')
+          hl('GitSignsStagedTopdeleteNr', '#7e1715')
 
           local gs = package.loaded.gitsigns
           local function map(mode, l, r, opts)
