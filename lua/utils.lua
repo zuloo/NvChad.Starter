@@ -1,7 +1,7 @@
-local ui = require("nvconfig").ui
-
 -- set timezone
 local timeShift = 1 * 60 * 60  -- +3 hours
+
+local ui = require("nvconfig").ui
 
 M = {
   set_virt_column_color = function()
