@@ -6,6 +6,7 @@ return {
     local minimap_config = require "configs.minimap"
     MiniMap = require("mini.map")
     MiniMap.setup(minimap_config)
+    MiniMap.open()
 
     local function map(mode, l, r, opts)
       opts = opts or {}
