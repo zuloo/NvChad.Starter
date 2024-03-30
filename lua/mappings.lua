@@ -77,7 +77,13 @@ map({ "n", "t" }, "<A-i>", function()
       border="single"
     }
   }
+  return '<Ignore>'
 end, { desc = "Terminal Toggle Floating term" })
+
+map({ "n", "t"}, "<leader>tt", function()
+  require("base46").toggle_theme()
+  return '<Ignore>'
+end, {expr=true, desc="Toggle switch dark/light theme"})
 
 map("n", ";", ":", { desc = "CMD enter command mode" })
 map("i", "jk", "<ESC>")
