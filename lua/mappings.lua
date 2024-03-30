@@ -82,6 +82,7 @@ end, { desc = "Terminal Toggle Floating term" })
 
 map({ "n", "t"}, "<leader>tt", function()
   require("base46").toggle_theme()
+  require("utils").set_virt_column_color()
   return '<Ignore>'
 end, {expr=true, desc="Toggle switch dark/light theme"})
 
