@@ -32,7 +32,7 @@ return {
     show_integration_count = true,
 
     -- Total width
-    width = 10,
+    width = 12,
 
     -- Value of 'winblend' option
     winblend = 25,
