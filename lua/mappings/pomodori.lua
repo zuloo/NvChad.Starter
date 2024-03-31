@@ -1,3 +1,4 @@
+local pomo = require "pomo"
 local map = vim.keymap.set
 
 map("n", "<leader>p5", ":TimerStart 5m Bell<CR>", {
@@ -36,23 +37,75 @@ map("n", "<leader>p60", ":TimerStart 60m Bell<CR>", {
   desc = "Pomodori Start 60 Minute Timer"
 })
 
-map("n", "<leader>pv", ":TimerShow -1<CR>", {
-  desc = "Pomodori View Active Timer"
+map("n", "<leader>pS", ":TimerStop -1<CR>", {
+  desc = "Pomodori Stop All Timers"
 })
 
-map("n", "<leader>ph", ":TimerHide -1<CR>", {
-  desc = "Pomodori Hide Active Timer"
+map("n", "<leader>pP", ":TimerPause -1<CR>", {
+  desc = "Pomodori Pause All Timers"
 })
 
-map("n", "<leader>pp", ":TimerPause -1<CR>", {
-  desc = "Pomodori Pause Active Timer"
+map("n", "<leader>pR", ":TimerResume -1<CR>", {
+  desc = "Pomodori Resume All Timers"
 })
 
-map("n", "<leader>pr", ":TimerResume -1<CR>", {
-  desc = "Pomodori Resume Active Timer"
+map("n", "<leader>pV", ":TimerShow -1<CR>", {
+  desc = "Pomodori View/Show All Timers"
 })
 
-map("n", "<leader>ps", ":TimerStop -1<CR>", {
-  desc = "Pomodori Stop Active Timer"
+map("n", "<leader>pH", ":TimerHide -1<CR>", {
+  desc = "Pomodori Hide All Timers"
 })
+map("n", "<leader>pv", function()
+  local timer = pomo.get_first_to_finish()
+  if timer ~= nil then
+    pomo.show_timer(timer)
+  end
+  return "<Ignore>"
+end, { desc = "Pomodori View Next Timer"})
 
+map("n", "<leader>ph", function()
+  local timer = pomo.get_first_to_finish()
+  if timer ~= nil then
+    pomo.hide_timer(timer)
+  end
+  return "<Ignore>"
+end, { desc = "Pomodori Hide Next Timer" })
+
+map("n", "<leader>pp", function()
+  local timer = pomo.get_first_to_finish()
+  if timer ~= nil then
+    pomo.pause_timer(timer)
+  end
+  return "<Ignore>"
+end, { desc = "Pomodori Pause Next Timer" })
+
+map("n", "<leader>pr", function()
+  local timer = pomo.get_first_to_finish()
+  if timer ~= nil then
+    pomo.resume_timer(timer)
+  end
+  return "<Ignore>"
+end, { desc = "Pomodori Resume Next Timer" })
+
+map("n", "<leader>ps", function()
+  local timer = pomo.get_first_to_finish()
+  if timer == nil then
+    return "<Ignore>"
+  end
+  local confirm = vim.fn.input(
+    string.format("Stop timer %s? [y/n]: ", tostring(timer))
+  )
+  if string.sub(string.lower(confirm), 0, 1) == "y" then
+    pomo.stop_timer(timer)
+    return "<Ignore>"
+  end
+  print("Didn't stop timer")
+  return "<Ignore>"
+end, { desc = "Pomodori Resume Next Timer" })
+
+map("n", "<leader>pt", function()
+  require('telescope').extensions.pomodori.timers(
+    require("telescope.themes").get_dropdown()
+  )
+end, { desc = "Pomodori Manage All Timers"})
