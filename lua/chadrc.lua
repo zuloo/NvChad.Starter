@@ -22,7 +22,9 @@ M.ui = {
     DiffText = { fg="none", bg={"red", -25}},
   },
 
-  telescope = { style = "bordered" },
+  telescope = {
+    style = "bordered",
+  },
 
   cheatsheet = { theme = "simple" },
 
