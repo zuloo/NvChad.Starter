@@ -20,8 +20,35 @@ M.ui = {
 
   cheatsheet = { theme = "simple" },
 
+  statusline = {
+    order = {
+      "mode",
+      "file",
+      "git",
+      "%=",
+      "lsp_msg",
+      "%=",
+      "diagnostics",
+      "lsp",
+      "pomodori",
+      "cwd",
+      "cursor"
+    },
+    modules =  {
+      pomodori = function()
+        return require("utils").get_next_pomodori_timer()
+       end,
+    }
+  },
+
   nvdash = {
       load_on_startup = true,
+  }
+}
+
+M.base46 = {
+ integrations = {
+    "notify",
   }
 }
 

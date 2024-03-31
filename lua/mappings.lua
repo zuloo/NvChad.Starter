@@ -3,6 +3,7 @@ require "nvchad.mappings"
 -- add yours here
 require "mappings.git"
 require "mappings.dadbod"
+require "mappings.pomodori"
 
 
 local map = vim.keymap.set
