@@ -9,6 +9,12 @@ M.ui = {
   theme_toggle = { "solarized_day", "solarized_night" },
 	theme = "solarized_day",
 
+  hl_add = {
+    St_TimerDivider = { fg="one_bg2", bg="one_bg" },
+    St_TimerIcon = { fg="pink", bg="one_bg2" },
+    St_Timer = { fg="pink", bg="one_bg2" },
+  },
+
   hl_override = {
     DiffAdd = { fg="none", bg={"green", -17}},
     DiffChange = { fg="none", bg={"teal", -23}},
