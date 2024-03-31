@@ -58,10 +58,10 @@ M.base_16 = {
   base01 = M.base_30.one_bg,
   base02 = M.base_30.one_bg2,
   base03 = M.base_30.one_bg3,
-  base04 = "#1b4651",
+  base04 = "#eee8d5",
   base05 = M.base_30.white,
-  base06 = "#eee8d5",
-  base07 = "#fdf6e3",
+  base06 = "#1b4651",
+  base07 = "#044A67",
   base08 = "#268bd2",
   base09 = "#519ABA",
   base0A = "#b28500",
@@ -89,6 +89,7 @@ M.polish_hl = {
   },
 
   defaults = {
+    MatchWord = { fg = "#d7d7af", bg = "#586E75", standout = true},
     IncSearch = { fg = "#c94c16", bg = "none", standout = true },
   },
 
