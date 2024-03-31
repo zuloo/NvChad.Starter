@@ -66,6 +66,7 @@ M.ui = {
       { "󰈭  Find Word", "Spc f w", "Telescope live_grep" },
       { "  Bookmarks", "Spc m a", "Telescope marks" },
       { "  DataBases", "Spc d b", "DBUI" },
+      { "󰃮  Agenda", "Spc o a", "" },
       { "  Mappings", "Spc c h", "NvCheatsheet" },
     },
   }
