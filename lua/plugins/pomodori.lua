@@ -7,6 +7,9 @@ return {
     -- Optional, but highly recommended if you want to use the "Default" timer
     "rcarriga/nvim-notify",
   },
+  init = function ()
+    require("telescope").load_extension("pomodori")
+  end,
   opts = {
     -- How often the notifiers are updated.
     update_interval = 1000,
