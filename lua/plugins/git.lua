@@ -4,21 +4,23 @@ return {
     config = function()
       require("gitsigns").setup {
         signs = {
-          add = { text = '+' },
-          change = { text = '~' },
-          delete = { text = '_' },
-          topdelete = { text = '‾' },
-          changedelete = { text = '~' },
+          add = { text = '┃' },
+          change = { text = '┃' },
+          delete = { text = '▁' },
+          topdelete = { text = '▔' },
+          changedelete = { text = '━' },
+          untracked = { text = '┋'}
         },
         _signs_staged = {
-          add = { text = '+' },
-          change = { text = '~' },
-          delete = { text = '_' },
-          topdelete = { text = '‾' },
-          changedelete = { text = '~' },
+          add = { text = '┃' },
+          change = { text = '┃' },
+          delete = { text = '▁' },
+          topdelete = { text = '▔' },
+          changedelete = { text = '━' },
+          untracked = { text = '┋' }
         },
         _signs_staged_enable= true,
-        numhl = true,
+        numhl = false,
         current_line_blame = true,
         current_line_blame_opts = {
           delay = 100
