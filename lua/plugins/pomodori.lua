@@ -43,12 +43,12 @@ return {
 
       -- You can also define custom notifiers by providing an "init" function instead of a name.
       -- See "Defining custom notifiers" below for an example 👇
-      { 
-        init = function(timer) 
+      {
+        init = function()
           return {
             start = function() end,
             stop = function() end,
-            tick = function(time) end,
+            tick = function() end,
             done = function()
               io.popen("paplay /usr/share/sounds/freedesktop/stereo/complete.oga")
             end
