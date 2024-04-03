@@ -105,7 +105,5 @@ map("n", "<leader>ps", function()
 end, { desc = "Pomodori Resume Next Timer" })
 
 map("n", "<leader>pt", function()
-  require('telescope').extensions.pomodori.timers(
-    require("telescope.themes").get_dropdown()
-  )
+  require('telescope').extensions.pomodori.timers()
 end, { desc = "Pomodori Manage All Timers"})
