@@ -8,6 +8,8 @@ require "mappings.pomodori"
 
 local map = vim.keymap.set
 
+map("v", "<leader>sc", ":Silicon<CR>", { desc="Snapshot Code" })
+
 map("n", "<leader>n", function()
   vim.opt.number = not vim.opt.number._value
   return '<Ignore>'
