@@ -57,6 +57,9 @@ return {
         "terraform-ls", -- terraform
         "tflint",
 
+        "docker-compose-language-service",
+        "dockerfile-lanuage-server",
+
         "tfsec", -- security scanner
 
         "systemdlint",
@@ -101,10 +104,10 @@ return {
         -- "detekt", -- static code analysis for kotlin
         -- "kotlin-debug-adapter",
 
-        -- "docker-compose-language-service",
-        -- "dockerfile-lanuage-server",
         -- "kotlin-language-server",
         -- "ktlint",
+
+        "elexir-ls",
 
         "templ", -- go templating
 
