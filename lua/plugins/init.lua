@@ -58,7 +58,7 @@ return {
         "tflint",
 
         "docker-compose-language-service",
-        "dockerfile-lanuage-server",
+        "dockerfile-language-server",
 
         "tfsec", -- security scanner
 
@@ -107,7 +107,7 @@ return {
         -- "kotlin-language-server",
         -- "ktlint",
 
-        "elexir-ls",
+        "elixir-ls",
 
         "templ", -- go templating
 
