@@ -4,6 +4,7 @@ require "nvchad.mappings"
 require "mappings.git"
 require "mappings.dadbod"
 require "mappings.pomodori"
+require "mappings.vim-tmux"
 
 
 local map = vim.keymap.set
