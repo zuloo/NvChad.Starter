@@ -10,9 +10,10 @@ return {
         tab_width = 2,
         background_image = vim.fn.expand("~/Pictures/bg.jpg"),
         shadow_color = "#000000",
-        shadow_blur_radius = 5,
-        shadow_offset_x = 3,
-        shadow_offset_y = 3,
+        no_line_number = true,
+        shadow_blur_radius = 10,
+        shadow_offset_x = 5,
+        shadow_offset_y = 5,
         to_clipboard = true,
         window_title = function()
           return vim.fn.fnamemodify(
