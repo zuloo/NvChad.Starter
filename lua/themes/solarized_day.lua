@@ -100,7 +100,8 @@ M.polish_hl = {
     DiagnosticVirtualTextHint = { bg = "#d7d7af", fg = M.base_30.purple },
     DiagnosticError = { bg = "#d7d7af" , fg = M.base_30.red },
     DiagnosticWarn = { bg = "#d7d7af", fg = M.base_30.yellow },
-    DiagnosticInfo = { bg = "#d7d7af", fg = M.base_30.blue },
+    DiagnosticInfo = { bg = "#d7d7af", fg = M.base_30.nord_blue },
+    DiagnosticOk = { bg = "#d7d7af", fg = M.base_30.vibrant_green },
     DiagnosticHint = { bg = "#d7d7af", fg = M.base_30.purple },
   },
 }
