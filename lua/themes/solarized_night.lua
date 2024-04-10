@@ -64,6 +64,7 @@ M.polish_hl = {
     ["@operator"] = { fg = "#849900" },
     ["@variable.parameter"] = { fg = "#c94c16" },
     ["@function.builtin"] = { fg = "#c94c16" },
+    ["@comment"] = { italic = true },
   },
 
   syntax = {
@@ -73,6 +74,7 @@ M.polish_hl = {
 
   defaults = {
     IncSearch = { fg = "#c94c16", bg = "none", standout = true },
+    Comment = {italic = true },
   },
 
   lsp = {
