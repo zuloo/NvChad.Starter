@@ -16,7 +16,7 @@ M = {
     -- automatigicaly choose day or night theme
     local b46 = require("base46")
     b46.toggle_theme()
-    local hours = tonumber(os.date('%H', os.time() + timeShift))
+    local hours = tonumber(os.date('%H', os.time()))
     if hours > 7 and hours < 20 then
       if ui.theme ~= ui.theme_toggle[1] then
         b46.toggle_theme()
