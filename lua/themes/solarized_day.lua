@@ -98,6 +98,10 @@ M.polish_hl = {
     DiagnosticVirtualTextWarn = { bg = "#d7d7af", fg = M.base_30.yellow },
     DiagnosticVirtualTextInfo = { bg = "#d7d7af", fg = M.base_30.blue },
     DiagnosticVirtualTextHint = { bg = "#d7d7af", fg = M.base_30.purple },
+    DiagnosticError = { bg = "#d7d7af" , fg = M.base_30.red },
+    DiagnosticWarn = { bg = "#d7d7af", fg = M.base_30.yellow },
+    DiagnosticInfo = { bg = "#d7d7af", fg = M.base_30.blue },
+    DiagnosticHint = { bg = "#d7d7af", fg = M.base_30.purple },
   },
 }
 M = require("base46").override_theme(M, "solarized_light")
