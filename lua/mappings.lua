@@ -5,6 +5,7 @@ require "mappings.git"
 require "mappings.dadbod"
 require "mappings.pomodori"
 require "mappings.vim-tmux"
+require "mappings.iron-repl"
 
 
 local map = vim.keymap.set
