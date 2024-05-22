@@ -12,6 +12,9 @@ local map = vim.keymap.set
 
 map("v", "<leader>sc", ":Silicon<CR>", { desc="Snapshot Code" })
 
+map("n", "<leader>sm", ":lua require('precognition').toggle()<CR>",
+  { desc="Show movement hints" })
+
 map("n", "<leader>n", function()
   vim.opt.number = not vim.opt.number._value
   return '<Ignore>'
