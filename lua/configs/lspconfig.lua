@@ -40,6 +40,8 @@ local servers = {
   -- "markdown-oxide",
   -- "ltex-ls",
   --
+  "gopls",
+  --
   -- "typst-lsp",
   -- "typstfmt",
   --

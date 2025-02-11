@@ -13,10 +13,8 @@ return {
       vim.keymap.set(mode, l, r, opts)
     end
 
-    map('n', '<leader>mm', function()
-      MiniMap.toggle()
-      return '<Ignore>'
-    end, {expr=true, desc="Toggle Mini Map"})
+    map('n', '<leader>mm', ":lua require('mini.map').toggle() <CR>",
+      {desc="Toggle Mini Map"})
 
     map('n', '<leader>mr', function()
       MiniMap.refresh()

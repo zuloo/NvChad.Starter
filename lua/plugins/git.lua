@@ -11,7 +11,7 @@ return {
           changedelete = { text = '━' },
           untracked = { text = '┋'}
         },
-        _signs_staged = {
+        signs_staged = {
           add = { text = '┃' },
           change = { text = '┃' },
           delete = { text = '▁' },
@@ -19,7 +19,7 @@ return {
           changedelete = { text = '━' },
           untracked = { text = '┋' }
         },
-        _signs_staged_enable= true,
+        signs_staged_enable= true,
         numhl = false,
         current_line_blame = true,
         current_line_blame_opts = {
