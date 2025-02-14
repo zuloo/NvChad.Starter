@@ -1,5 +1,5 @@
 -- set timezone
-local ui = require("nvconfig").ui
+local ui = require("nvconfig").base46
 
 M = {
   set_virt_column_color = function()
@@ -19,8 +19,7 @@ M = {
       if ui.theme ~= ui.theme_toggle[1] then
         b46.toggle_theme()
         M.set_virt_column_color()
-      end
-    else
+      end else
       if ui.theme == ui.theme_toggle[1] then
         b46.toggle_theme()
         M.set_virt_column_color()
@@ -45,6 +44,18 @@ M = {
      time_str = time_str.gsub(time_str, ':', '')
      time_str = time_str.gsub(time_str, "%(paused%)", '󰏤')
      return "%#St_TimerDivider#%#St_TimerIcon#󰂚%#St_Timer#" ..  time_str .. " "
+  end,
+
+  setup_nvimtree = function()
+    local nt_api = require'nvim-tree.api'
+
+    nt_api.events.subscribe(nt_api.events.Event.TreeOpen, function()
+      local tree_winid = nt_api.tree.winid()
+
+      if tree_winid ~= nil then
+        vim.api.nvim_set_option_value('statusline', '%t', {win = tree_winid})
+      end
+    end)
   end
 }
 

@@ -16,7 +16,21 @@ local lazy_config = require "configs.lazy"
 -- load plugins
 require("lazy").setup({
   {
+    "vhyrro/luarocks.nvim",
+    priority = 1000, -- We'd like this plugin to load first out of the rest
+    opts = {
+      rocks = { "magick" },
+      luarocks_build_args = {
+        "--with-lua-include=/usr/include",
+      },
+    },
+    config = function()
+      require("luarocks-nvim").setup()
+    end,
+  },
+  {
     "NvChad/NvChad",
+    dependencies = { "luarocks.nvim" },
     lazy = false,
     branch = "v2.5",
     import = "nvchad.plugins",
@@ -42,3 +56,4 @@ local colorizer_config = require "configs.colorizer"
 require("colorizer").setup(colorizer_config)
 
 require("utils").choose_theme()
+require("utils").setup_nvimtree()
