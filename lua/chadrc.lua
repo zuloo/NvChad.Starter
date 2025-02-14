@@ -66,7 +66,7 @@ M.base46 = {
   },
 
   theme_toggle = { "solarized_day", "solarized_night" },
-	theme = "solarized_day",
+	theme = "solarized_night",
 
   hl_add = {
     St_TimerDivider = { fg="one_bg2", bg="one_bg" },
@@ -79,6 +79,7 @@ M.base46 = {
     DiffChange = { fg="none", bg={"teal", -23}},
     DiffDelete = { fg="none", bg={"red", -25}},
     DiffText = { fg="none", bg={"red", -25}},
+    FloatTitle = { fg="white", bg="one_bg3"}
   },
 }
 
