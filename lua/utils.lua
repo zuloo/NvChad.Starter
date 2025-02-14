@@ -88,16 +88,27 @@ M = {
     local nt_api = require'nvim-tree.api'
 
     nt_api.events.subscribe(nt_api.events.Event.TreeOpen, function()
-      local bufnr = vim.api.nvim_get_current_buf()
-      local api = require('nvim-tree.api')
+      local nt_buf = vim.api.nvim_get_current_buf()
+
+      vim.api.nvim_create_autocmd({ 'CursorMoved' }, {
+        buffer = nt_buf,
+        callback = function()
+          local ok, node = pcall(nt_api.tree.get_node_under_cursor)
+          if ok then
+            vim.schedule(function()
+              vim.api.nvim_buf_set_name(nt_buf, "NvimTree: " .. node.name)
+            end)
+          end
+        end,
+      })
 
       -- Important: When you supply an `on_attach` function, nvim-tree won't
       -- automatically set up the default keymaps. To set up the default keymaps,
       -- call the `default_on_attach` function. See `:help nvim-tree-quickstart-custom-mappings`.
-      api.config.mappings.default_on_attach(bufnr)
+      nt_api.config.mappings.default_on_attach(nt_buf)
 
       local function opts(desc)
-        return { desc = 'nvim-tree: ' .. desc, buffer = bufnr, noremap = true, silent = true, nowait = true }
+        return { desc = 'nvim-tree: ' .. desc, buffer = nt_buf, noremap = true, silent = true, nowait = true }
       end
 
       local preview = require('nvim-tree-preview')
@@ -109,10 +120,10 @@ M = {
 
       -- Option A: Smart tab behavior: Only preview files, expand/collapse directories (recommended)
       vim.keymap.set('n', '<Tab>', function()
-        local ok, node = pcall(api.tree.get_node_under_cursor)
+        local ok, node = pcall(nt_api.tree.get_node_under_cursor)
         if ok and node then
           if node.type == 'directory' then
-            -- api.node.open.edit()
+            nt_api.node.open.edit()
           else
             preview.node(node, { toggle_focus = true })
           end
