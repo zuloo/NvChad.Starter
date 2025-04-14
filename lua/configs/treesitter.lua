@@ -60,7 +60,7 @@ return {
 
     -- javalike
     "java",
-    "closure",
+    -- "closure",
     "scala",
 
    -- low level
@@ -75,7 +75,7 @@ return {
     "sql",
 
     -- gamedev
-    "godot_resouce",
+    "godot_resource",
     "gdscript",
     "gdshader",
     "glsl",
