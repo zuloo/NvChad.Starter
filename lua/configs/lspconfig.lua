@@ -29,6 +29,7 @@ local servers = {
   -- "docformatter", -- docstring pep 257
   -- "pyment", -- docstring generator
   -- "pyre", -- pep 484 complient
+  "pylsp",
   --
   -- "jq-lsp",
   -- "json-lsp",
