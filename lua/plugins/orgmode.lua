@@ -1,4 +1,4 @@
-return {
+local foo = {
   {
     'nvim-orgmode/orgmode',
     dependencies = {
@@ -6,14 +6,6 @@ return {
     },
     event = 'VeryLazy',
     config = function()
-      -- Setup treesitter
-      require('nvim-treesitter.configs').setup({
-        highlight = {
-          enable = true,
-        },
-        ensure_installed = { 'org' },
-      })
-
       -- Setup orgmode
       require('orgmode').setup({
         org_agenda_files = '~/Documents/git/org/**/*',
@@ -50,3 +42,5 @@ return {
     end,
   }
 }
+
+return foo

@@ -1,4 +1,5 @@
 return {
+  highlight = true,
   ensure_installed = {
     -- defaults 
     "vim",
@@ -41,7 +42,7 @@ return {
     -- data
     "csv",
     "json",
-    "org",
+    -- "org",
     "psv",
     "toml",
     "tsv",

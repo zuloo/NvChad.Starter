@@ -8,6 +8,7 @@ adapted from [github.com/NvChad/starter](https://github.com/NvChad/starter)
 - [nvim-tree-preview](https://github.com/b0o/nvim-tree-preview.lua)
 - [image preview](https://github.com/3rd/image.nvim)
 - [codecompanion](https://github.com/olimorris/codecompanion.nvim)
+- [cycles.nvim](https://github.com/zuloo/cycles.nvim)
 - [VirtColumen](https://github.com/xiyaowong/virtcolumn.nvim")
 - keymaps for [GitSigns](https://github.com/lewis6991/gitsigns.nvim),
   [vim-fugitive](https://github.com/tpope/vim-fugitive) and

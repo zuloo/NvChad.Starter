@@ -66,7 +66,7 @@ M.base46 = {
   },
 
   theme_toggle = { "solarized_day", "solarized_night" },
-	theme = "solarized_night",
+	theme = "solarized_day",
 
   hl_add = {
     St_TimerDivider = { fg="one_bg2", bg="one_bg" },

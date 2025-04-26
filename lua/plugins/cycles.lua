@@ -1,5 +1,10 @@
+-- tree-sitter-supercollider
 return {
-  'grddavies/tidal.nvim',
+  'zuloo/cycles.nvim',
+  cmd = {
+    'CyclesLaunch',
+    'CyclesQuit',
+  },
   opts = {
     boot = {
       tidal = {
@@ -17,8 +22,9 @@ return {
         cmd = "sclang",
         args = {},
         --- SuperCollider boot file
-        file = vim.api.nvim_get_runtime_file("bootfiles/BootSuperDirt.scd", false)[1],
-        enabled = false,
+        -- glob = 'BootSuperDirt.scd',
+        file =  vim.api.nvim_get_runtime_file("bootfiles/BootSuperDirt.scd", false)[1],
+        enabled = true,
       },
       split = "v",
     },
