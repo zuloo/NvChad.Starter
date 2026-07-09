@@ -57,4 +57,5 @@ require("colorizer").setup(colorizer_config)
 
 require("utils").choose_theme()
 require("utils").setup_nvimtree()
+require("utils").setup_pager()
 

@@ -2,11 +2,23 @@
 local ui = require("nvconfig").base46
 
 M = {
+  setup_pager = function()
+    vim.api.nvim_create_autocmd("FileType", {
+      pattern = "pager_mode",
+      callback = function()
+        local b = vim.api.nvim_create_buf(false, true)
+        local chan = vim.api.nvim_open_term(b, {})
+        vim.api.nvim_chan_send(chan, table.concat(vim.api.nvim_buf_get_lines(0, 0, -1, false), '\n'))
+        vim.api.nvim_win_set_buf(0, b)
+      end
+    })
+  end,
+
   set_virt_column_color = function()
     if (ui.theme == ui.theme_toggle[1]) then
       vim.api.nvim_command(":highlight VirtColumn guifg=#d7d7af")
     else
-      vim.api.nvim_command(":highlight VirtColumn guifg=#03394F")
+      vim.api.nvim_command(":highlight VirtColumn guifg=#044A67")
     end
   end,
 

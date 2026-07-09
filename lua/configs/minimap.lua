@@ -35,7 +35,7 @@ return {
     width = 12,
 
     -- Value of 'winblend' option
-    winblend = 25,
+    winblend = 0,
 
     -- Z-index
     zindex = 10,
